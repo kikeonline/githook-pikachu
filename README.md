@@ -12,4 +12,4 @@ Give excecutable permissions.
 
 I used this file as a base to make more complex task. In ths particular script if the push comes from a master branch I copy all the master files from the bare repo to /www/html where my web files are served. Else (another branch) files are simply saved and no deploy is done. Most importantly Pikachu greets the pusher.
 
-Imagination is the limit ✌️
+Used it to fulfill your needs, imagination is the limit ✌️
