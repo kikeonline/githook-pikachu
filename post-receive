@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#colores
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+no_color='\033[0m'
+
+while read oldrev newrev ref
+do
+       	branch=`echo $ref | cut -d/ -f3`
+       	echo -e "${yellow}Trabajando con branch $branch ${no_color}"
+       	if [ "master" == "$branch" ]; then
+       		echo -e "${yellow}Archivos directo a deploy blahblahblah.com... ${no_color}"
+       		GIT_WORK_TREE=/var/www/ git checkout -f master
+       	else
+       		echo -e "${yellow}$branch actualizado! ${no_color}"
+       		echo -e "${red}No deploy! ${no_color}"
+       	fi
+done
+echo -e "${green}COMPLETADO! y sin errores!${no_color}\nHasta la próxima!"
+echo -e "${yellow}"
+echo -e '
+░█▀▀▄░░░░░░░░░░░▄▀▀█
+░█░░░▀▄░▄▄▄▄▄░▄▀░░░█
+░░▀▄░░░▀░░░░░▀░░░▄▀
+░░░░▌░▄▄░░░▄▄░▐▀▀
+░░░▐░░█▄░░░▄█░░▌▄▄▀▀▀▀█
+░░░▌▄▄▀▀░▄░▀▀▄▄▐░░░░░░█
+▄▀▀▐▀▀░▄▄▄▄▄░▀▀▌▄▄▄░░░█
+█░░░▀▄░█░░░█░▄▀░░░░█▀▀▀
+░▀▄░░▀░░▀▀▀░░▀░░░▄█▀
+░░░█░░░░░░░░░░░▄▀▄░▀▄
+░░░█░░░░░░░░░▄▀█░░█░░█
+░░░█░░░░░░░░░░░█▄█░░▄▀
+░░░█░░░░░░░░░░░████▀
+░░░▀▄▄▀▀▄▄▀▀▄▄▄█▀'
+echo -e "${no_color}"
