@@ -1,15 +1,15 @@
 # pikachu-githook
-[githooks](https://git-scm.com/docs/githooks) - post-receive: Archivo que se ejecuta automáticamente al recibir un push de git al servidor. Este es un bash script base que se puede usar para automatizar pasos que se hacen despues de un push. Pero lo más importante de todo es que pikachu saluda a la persona que hizo el push.
+[githooks](https://git-scm.com/docs/githooks) - post-receive: Script that gets excecuted when the server receives a push. Can be use to automate tasks that have to be made always after a push is done.
 ![alt tag](https://github.com/kikeonline/pikachu-githook/blob/master/terminal-screen.png)
 
-# Instalación/Uso
-Copiar el archivo post-receive a la carpeta .git/hooks
+# Instalation
+Copy the post-receive script to .git/hooks probably you already have some example files there.
 
-Dar permisos ejecutables
+Give excecutable permissions.
   ```bash
-  sudo chmod +x post-receive
+  $sudo chmod +x post-receive
   ```
 
-En este archivo se encuentra una condicional: IF el push proviene del master se copian los archivos a la carpeta donde se sirve la pagina web, ELSE (otro branch que no es master) simplemente se recibe el push sin hacer nada mas.
+I used this file as a base to make more complex task. In ths particular script if the push comes from a master branch I copy all the master files from the bare repo to /www/html where my web files are served. Else (another branch) files are simply saved and no deploy is done. Most importantly Pikachu greets the pusher.
 
-De ahi la imaginación es el limite ✌️
+Imagination is the limit ✌️
