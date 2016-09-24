@@ -1,4 +1,4 @@
-# pikachu-githook
+# githook-pikachu
 [githooks](https://git-scm.com/docs/githooks) - post-receive: Script that gets excecuted when the server receives a push. Can be use to automate tasks that have to be made after a push is done.
 <img src="https://github.com/kikeonline/pikachu-githook/blob/master/terminal-screen.png" width="600">
 
