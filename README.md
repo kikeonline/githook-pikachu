@@ -12,4 +12,4 @@ Give excecutable permissions.
 
 I used this file as a base to make more complex tasks. In this particular script if the push comes from a master branch I copy all the master files from the bare repo to /www/html where my web files are served. Else (another branch) files are simply saved and no deploy is done. Most importantly Pikachu greets the pusher.
 
-Used it to fulfill your needs, You can even send push notifications to your smartphone through [Pushover](https://pushover.net). imagination is the limit ✌️
+Used it to fulfill your needs, You can even send push notifications to your smartphone through [Pushover](https://pushover.net) or send a message to [Slack](https://slack.com). imagination is the limit ✌️
